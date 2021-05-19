@@ -1,0 +1,75 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\author{Hermilo Cortés González}
+\begin{document}
+\sffamily
+
+\section*{El modelo de Goodwin \cite{KEEN2013221}}
+
+El ciclo causal de modelo es el siguiente:
+
+\begin{itemize}
+\item El nivel de stock de capital $K$ determina en nivel de producto $Y$ via el acelerador$\nu$:
+
+\begin{center}
+  $Y=\frac{K}{\nu}$.
+\end{center}
+
+\item El nivel de producto determina el nivel de empleo $L$ via la productividad laboral $a$: 
+\begin{center}
+$L=\frac{Y}{a}$.
+\end{center}
+
+\item El nivel de empleo determina la tasa de empleo $\lambda$ (la proporción de $L$ con respecto a la población $N$): 
+
+\begin{center}
+$\lambda = \frac{L}{N}$.
+\end{center}
+
+\item La tasa de empleo determina el cambio en los salario reales $w$ vía la curva de Phillips: 
+
+\begin{center}
+$\frac{dw}{dt} \frac{1}{w}=(-c + d \cdot \lambda)$.
+\end{center}
+
+\item El nivel de las ganancias, $\Pi$, está dado por: 
+\begin{center}
+$\Pi = Y- w \cdot L$.
+\end{center}
+
+\item Las ganancias determinan la inversión $I$ (en este modelo, todas las ganancias son invertidas): 
+\begin{center}
+$I = \Pi$.
+\end{center}
+
+\item La inversión menos la depreciación ($\gamma$) determina la tasa de cambio del stock de capital $K$, cerrando el modelo:
+\begin{center}
+$\frac{dK}{dt}= I- \gamma \cdot K$
+
+\end{center}
+\end{itemize}
+
+\pagebreak
+Con la población creciendo en $\beta$ por ciento al año, la productividad laboral creciendo $\alpha$ por ciento, y con una curva de Phillips lineal de la forma $P_h(\lambda)=(-c+d\cdot\lambda)$. Por su parte, $a$ y $b$ son constantes, el modelo consiste de las siguientes 4 ecuaciones diferenciales con respecto al empleo, el salario real, la productividad laboral y el crecimiento de la población:
+
+\begin{align*}
+\dfrac{d}{dt}L &= L \cdot \Big(\dfrac{1-\frac{w}{a}}{\nu}- \gamma - \alpha \Big)\\[1em]
+\dfrac{d}{dt} w &= (-c+d \cdot \lambda) \cdot w \\[1em]
+\dfrac{d}{dt} a &= \alpha \cdot a \\[1em]
+\dfrac{d}{dt} N &= \beta \cdot N
+\end{align*}
+
+\begin{itemize}
+\item Los ciclos en el modelo de Goodwin son causados por la no linealidad estructural de los estados del sistema cuando la tasa salarial y el nivel de empleo se multiplican entre sí. 
+\item La interacción entre los cambios en la distribución del ingreso (que surge de los cambios en el poder de negociación relativo de los trabajadores cuando los niveles de empleo aumentan y disminuyen) y la tasa de crecimiento generan los ciclos: un alto nivel de inversión provoca un alto crecimiento, por lo que el desempleo disminuye, lo que conduce a un aumento de los salarios y una disminución de la participación en las ganancias; la caída de la participación en las ganancias reduce la inversión y el crecimiento económico, lo que lleva a un aumento del desempleo; esto reduce los salarios y restablece la participación en las ganancias, lo que lleva a que el ciclo se repita. 
+\end{itemize}
+\bibliographystyle{apalike}
+\bibliography{ref_goodwin_model}
+
+
+\end{document}
